@@ -145,6 +145,15 @@ public class NfcService implements DeviceHostListener {
     // goes off
     static final int ROUTING_WATCHDOG_MS = 10000;
 
+    // Time to wait for NFC controller to initialize before watchdog
+    // goes off. This time is chosen large, because firmware download
+    // may be a part of initialization.
+    static final int INIT_WATCHDOG_MS = 90000;
+
+    // Time to wait for routing to be applied before watchdog
+    // goes off
+    static final int ROUTING_WATCHDOG_MS = 10000;
+
     // for use with playSound()
     public static final int SOUND_START = 0;
     public static final int SOUND_END = 1;
